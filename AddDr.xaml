@@ -1,0 +1,62 @@
+﻿<Window x:Class="Social_Blade_Dashboard.AddDr"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Social_Blade_Dashboard"
+        mc:Ignorable="d"
+        Title="AddDr" Height="550" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <StackPanel Margin="0,0,0,-101">
+            <Label Content="Добавление" FontSize="30" HorizontalAlignment="Center"/>
+
+            <Label Content="ФИО водителя" HorizontalAlignment="left" Margin="30 10 0 1" Width="291" FontSize="20" Padding="10" Foreground="#1ac6ff" FontWeight="SemiBold"/>
+            <TextBox x:Name="Driver" Width="300" HorizontalAlignment="left" Margin="40 2 4 4" materialDesign:HintAssist.Hint="ФИО Водителя" Foreground="Black" FontSize="20" BorderBrush="Gray" CaretBrush="#FFD94448" SelectionBrush="#FFD94448"/>
+            <Label Content="Автомобиль" HorizontalAlignment="left" Margin="30 10 0 1" Width="291" FontSize="20" Padding="10" Foreground="#1ac6ff" FontWeight="SemiBold"/>
+            <ComboBox x:Name="ComboBox1" Margin="-17 10 0 0" Width="300" FontSize="20" FontWeight="SemiBold" Foreground="#1ac6ff" DataContextChanged="ComboBox_DataContextChanged"  SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem>Kia Rio</ComboBoxItem>
+                <ComboBoxItem>Benz CLS-klasse</ComboBoxItem>
+                <ComboBoxItem>Volkswagen Polo</ComboBoxItem>
+                <ComboBoxItem>Skoda Roomster</ComboBoxItem>
+                <ComboBoxItem>Mazda CX-5</ComboBoxItem>
+                <ComboBoxItem>Kia Optima</ComboBoxItem>
+                <ComboBoxItem>Hyundai Sonata</ComboBoxItem>
+                <ComboBoxItem>Honda Accord</ComboBoxItem>
+                <ComboBoxItem>Honda Civic</ComboBoxItem>
+                <ComboBoxItem>Ford Focus</ComboBoxItem>
+                <ComboBoxItem>Citroen C-Elysee</ComboBoxItem>
+                <ComboBoxItem>BMW 5er</ComboBoxItem>
+                <ComboBoxItem>Mercedes-Benz CLK DTM AMG</ComboBoxItem>
+                <ComboBoxItem>Mercedes-Benz CLC-класс</ComboBoxItem>
+                <ComboBoxItem>BMW X5 (E70)</ComboBoxItem>
+                <ComboBoxItem>BMW E36</ComboBoxItem>
+                <ComboBoxItem>BMW 2 Active Tourer</ComboBoxItem>
+
+            </ComboBox >
+            <Label Content="Гос.Номер" HorizontalAlignment="left" Margin="30 10 0 1" Width="291" FontSize="20" Padding="10" Foreground="#1ac6ff" FontWeight="SemiBold"/>
+            <ComboBox x:Name="NumbtrBox" Margin="-17 10 0 0" Width="300" FontSize="20" FontWeight="SemiBold" Foreground="#1ac6ff" DataContextChanged="NumbtrBox_DataContextChanged"  SelectionChanged="NumbtrBox_SelectionChanged">
+                <ComboBoxItem>B 000 ME</ComboBoxItem>
+                <ComboBoxItem>О 777 РР</ComboBoxItem>
+                <ComboBoxItem>В 062 КН</ComboBoxItem>
+                <ComboBoxItem>В 347 КН</ComboBoxItem>
+                <ComboBoxItem>Е 105 ТТ</ComboBoxItem>
+                <ComboBoxItem>Е 208 ТТ</ComboBoxItem>
+                <ComboBoxItem>М 097 ХР</ComboBoxItem>
+                <ComboBoxItem>М 428 ХР</ComboBoxItem>
+                <ComboBoxItem>Н 126 НН</ComboBoxItem>
+                <ComboBoxItem>Р 114 КТ</ComboBoxItem>
+                <ComboBoxItem>Р 114 КТ</ComboBoxItem>
+                <ComboBoxItem>Т 121 МХ</ComboBoxItem>
+                <ComboBoxItem>У 077 ХВ</ComboBoxItem>
+                <ComboBoxItem>Х 189 ОН</ComboBoxItem>
+                <ComboBoxItem>Х 932 ОН</ComboBoxItem>
+                <ComboBoxItem>У 097 МР</ComboBoxItem>
+                <ComboBoxItem>У 850 МР</ComboBoxItem>
+            </ComboBox>
+            <Button  Content="Отлично" FontSize="20" Height="50" Width="300" Margin="10 40" materialDesign:ButtonAssist.CornerRadius="20" Background="#1ac6ff" Foreground="White" Cursor="Hand" Click="Button_Click" />
+
+        </StackPanel>
+
+    </Grid>
+</Window>

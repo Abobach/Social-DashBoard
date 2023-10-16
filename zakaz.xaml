@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Social_Blade_Dashboard.zakaz"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Social_Blade_Dashboard"
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1100">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#FFE63070" Offset="1" />
+                <GradientStop Color="#FFFE8704" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <materialDesign:Card Margin="632,32,10,31"  UniformCornerRadius="50" RenderTransformOrigin="0.521,0.672" >
+
+            <StackPanel Margin="0,0,0,10" >
+                <Label Content="Ваши заказы" HorizontalAlignment="Center" FontSize="50"/>
+                <Button x:Name="Zakaz" Content="Ваши заказы" FontSize="30" Height="50" Width="300" Margin="10 600" materialDesign:ButtonAssist.CornerRadius="20" Background="#1ac6ff" Foreground="Black" Click="Zakaz_Click"  Cursor="Hand" />
+            </StackPanel>
+        </materialDesign:Card>
+        <ListBox HorizontalAlignment="Left" Height="616" Margin="10,121,0,0" VerticalAlignment="Top" Width="622" Background="White" SelectionChanged="ListBox_SelectionChanged" x:Name="list"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Background" Value="Gainsboro"/>
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="Padding" Value="5"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</UserControl>

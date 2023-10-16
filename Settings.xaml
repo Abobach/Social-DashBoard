@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Social_Blade_Dashboard.Settings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Social_Blade_Dashboard"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="1100" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid Grid.Column="0" >
+
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                    <GradientStop Color="#FFE63070" Offset="1" />
+                    <GradientStop Color="#FFFE8704" Offset="0" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <StackPanel Margin="10">
+                <Grid Height="60"/>
+                <WrapPanel HorizontalAlignment="Center"/>
+                <materialDesign:Card UniformCornerRadius="50" Padding="10" Background="White" Height="747" Width="1050">
+                    <StackPanel Margin="10,-3,0,46" >
+                        <Label Content="Настройки" HorizontalAlignment="Left" Height="86" Margin="30,10,0,1" Width="349" FontSize="60" FontWeight="SemiBold"/>
+                        <Label Content="Имя Аккаунта" HorizontalAlignment="left" Margin="30 10 0 1" Width="291" FontSize="30" Padding="10" Foreground="#1ac6ff" FontWeight="SemiBold"/>
+                        <TextBox x:Name="Nameaccaunt" Width="400" HorizontalAlignment="left" Margin="40 2 4 4" materialDesign:HintAssist.Hint="Аккаунт" Foreground="Black" FontSize="25" BorderBrush="Gray" CaretBrush="#FFD94448" SelectionBrush="#FFD94448"/>
+                        <Label Content="Пароль" HorizontalAlignment="left" Margin="30 10 0 1" Width="291" FontSize="30" Padding="10" Foreground="#1ac6ff" FontWeight="SemiBold"/>
+                        <TextBox x:Name="Passwords" Width="400" HorizontalAlignment="left" Margin="40 2 4 4" materialDesign:HintAssist.Hint="Пароль" Foreground="Black" FontSize="25" BorderBrush="Gray" CaretBrush="#FFD94448" SelectionBrush="#FFD94448"/>
+                        <Label Content="Номер телефона" HorizontalAlignment="left" Margin="30 10 0 1" Width="291" FontSize="30" Padding="10" Foreground="#1ac6ff" FontWeight="SemiBold"/>
+                        <TextBox x:Name="number" Width="400" HorizontalAlignment="left" Margin="40 2 4 4" materialDesign:HintAssist.Hint="+7(999) 999-99-99" Foreground="Black" FontSize="25" BorderBrush="Gray" CaretBrush="#FFD94448" SelectionBrush="#FFD94448"/>
+                        <Label Content="Дата регистрации" HorizontalAlignment="left" Margin="30 10 0 1" Width="291" FontSize="30" Padding="10" Foreground="#1ac6ff" FontWeight="SemiBold"/>
+                        <TextBox x:Name="dete" Width="400" HorizontalAlignment="left" Margin="40 2 4 4"  Foreground="Black" FontSize="25" BorderBrush="Gray" CaretBrush="#FFD94448" SelectionBrush="#FFD94448"/>
+                        <Label Content="Имя пользователя" HorizontalAlignment="left" Margin="500 -890 0 1" Width="291" FontSize="30" Padding="10" Foreground="#1ac6ff" FontWeight="SemiBold" Height="69"/>
+                        <TextBox x:Name="Name" Width="460" HorizontalAlignment="left" Margin="500 -800 4 4"  Foreground="Black" FontSize="25" BorderBrush="Gray" CaretBrush="#FFD94448" SelectionBrush="#FFD94448" Height="70"/>
+                    </StackPanel>
+                </materialDesign:Card>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
